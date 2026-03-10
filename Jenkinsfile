@@ -21,10 +21,10 @@ pipeline {
             }
         }
 
-        stage('Run Python Script') {
+        stage(' Python ') {
             steps {
                 sh '''
-                    python3 script.py
+                    ./script.py
                 '''
             }
         }
