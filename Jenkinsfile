@@ -8,7 +8,7 @@ pipeline {
             steps {
                 git(
                     branch: 'main',
-                    url: ''
+                    url: 'https://github.com/LikhithMG/lab11.git'
                 )
             }
         }
