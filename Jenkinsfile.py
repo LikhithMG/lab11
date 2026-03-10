@@ -3,7 +3,7 @@ pipeline {
 
     stages {
 
-        stage('Clone Repository') {
+        stage('Clone ') {
             steps {
                 git branch: 'main',
                     url: 'https://github.com/LikhithMG/lab11.git'
@@ -22,9 +22,9 @@ pipeline {
         stage('Run Python Script') {
             steps {
                 sh '''
-                    python3 --version
+                   
                     chmod +x script.py
-                    python3 script.py
+                    python script.py
                 '''
             }
         }
