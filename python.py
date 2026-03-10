@@ -1,3 +1,1 @@
-a=2
-b=2
-a+b=4
+print(hello likith)
