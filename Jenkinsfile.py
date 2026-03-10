@@ -22,7 +22,6 @@ pipeline {
         stage('Run Python Script') {
             steps {
                 sh '''
-                   
                     chmod +x script.py
                     python script.py
                 '''
