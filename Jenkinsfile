@@ -2,7 +2,6 @@ pipeline {
     agent any
 
     stages {
-
         stage('Clone') {
             steps {
                 git(
@@ -21,13 +20,11 @@ pipeline {
             }
         }
 
-        stage(' Python ') {
+        stage('Python') {
             steps {
-                sh '''
-                    script.py
-                '''
+              
+                sh 'python3 script.py'
             }
         }
-
     }
 }
