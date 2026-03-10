@@ -2,12 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone') {
+
+        stage('Clone Repository') {
             steps {
-                git(
-                    branch: 'main',
+                git branch: 'main',
                     url: 'https://github.com/LikhithMG/lab11.git'
-                )
             }
         }
 
@@ -20,10 +19,13 @@ pipeline {
             }
         }
 
-        stage('Python') {
+        stage('Run Python Script') {
             steps {
-              
-                sh 'python3 script.py'
+                sh '''
+                    python3 --version
+                    chmod +x script.py
+                    python3 script.py
+                '''
             }
         }
     }
