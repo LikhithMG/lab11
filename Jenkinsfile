@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
 
@@ -13,11 +12,19 @@ pipeline {
             }
         }
 
-        stage('Run Script') {
+        stage('Run Shell Script') {
             steps {
                 sh '''
                     chmod +x script.sh
                     ./script.sh
+                '''
+            }
+        }
+
+        stage('Run Python Script') {
+            steps {
+                sh '''
+                    python3 script.py
                 '''
             }
         }
